@@ -1,0 +1,151 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+  }
+  
+  .form-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.1);
+  }
+  
+  h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .input-name {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .input-name label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #000000;
+  }
+  
+  .input-name input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    max-width: 320px;
+    border: 2px solid #000;
+    border-radius: 8px;
+  
+    /* 🔒 Estos dos aseguran fondo blanco y texto oscuro */
+    background-color: #ffffff !important;
+    color: #000000 !important;
+
+  }  
+  
+  .question-block {
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+  
+  .question-block p {
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  /* Oculta el radio nativo */
+.options input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-right: 6px;
+  }
+  
+  /* Estilo cuando está seleccionado */
+.options input[type="radio"]:checked {
+    background-color: #000000; /* celeste */
+    box-shadow: inset 0 0 0 4px white;
+  }
+  
+  /* Para mantener el número visible alineado */
+  .options label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    color: #000000;
+  }
+  
+  .submit-button {
+    display: block;
+    margin: 2rem auto 1rem auto;
+    padding: 0.75rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .result {
+    background-color: #f0f8ff;
+    border-left: 4px solid #007bff;
+    padding: 1.2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222;
+    max-width: 90%;
+  }
+  
+
+  .scale-description {
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .error-message {
+    color: #d8000c;
+    background-color: #ffd2d2;
+    border-left: 4px solid #d8000c;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+  }  
+  
+  

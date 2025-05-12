@@ -1,0 +1,83 @@
+.results-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #444;
+}
+
+.interpretation-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.interpretation-table th,
+.interpretation-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000000 ;
+}
+
+.interpretation-table th {
+  background-color: #000000 ;
+  font-size: 1.1rem;
+}
+
+.interpretation-table td {
+  font-size: 1rem;
+  color: #000000;
+}
+
+.retry-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 30px;
+  background-color: #000000;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+  background-color: #0056b3;
+}
+
+.results-container .recharts-responsive-container {
+  margin: 20px 0;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 0.9rem;
+}
+
+.recharts-cartesian-axis-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
