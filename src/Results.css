@@ -1,83 +1,142 @@
 .results-container {
-  width: 80%;
-  margin: 0 auto;
   padding: 20px;
-  background-color: #f4f4f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: fit-content;
+  color: #000000;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
 }
 
 h2 {
   text-align: center;
-  color: #333;
-  font-size: 2rem;
+  color: #000000;
   margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #555;
+.total-score,
+.balance,
+.open-answers,
+.action-plan,
+.importance,
+.reflection {
+  margin-bottom: 30px;
 }
 
-strong {
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  color: #444;
-}
-
-.interpretation-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-.interpretation-table th,
-.interpretation-table td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #000000 ;
-}
-
-.interpretation-table th {
-  background-color: #000000 ;
-  font-size: 1.1rem;
-}
-
-.interpretation-table td {
-  font-size: 1rem;
+.total-score h3,
+.balance h3,
+.open-answers h3,
+.action-plan h3,
+.importance h3,
+.reflection h3 {
   color: #000000;
 }
 
-.retry-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 30px;
+.total-score p,
+.balance p {
+  font-size: 1.2rem;
+}
+
+.balance p {
+  color: #000000;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="number"] {
+  align-items: center;
+  max-width: 60px;
+}
+
+button.submit-button {
   background-color: #000000;
   color: white;
+  padding: 10px 20px;
   font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
-.retry-button:hover {
-  background-color: #0056b3;
+button.submit-button:hover {
+  background-color: #2ecc71;
 }
 
-.results-container .recharts-responsive-container {
-  margin: 20px 0;
+.reflection ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.recharts-cartesian-axis-tick-value {
-  font-size: 0.9rem;
-}
-
-.recharts-cartesian-axis-title {
+.reflection ul li {
+  margin-bottom: 10px;
   font-size: 1.1rem;
-  font-weight: bold;
+  color: #34495e;
+}
+
+.reflection ul li::before {
+  content: "✓ ";
+  color: #27ae60;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .results-container {
+    padding: 15px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  .total-score p,
+  .balance p {
+    font-size: 1rem;
+  }
+
+  .new-survey-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.new-survey-button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.new-survey-button:hover {
+  background-color: #3700b3;
+}
 }
