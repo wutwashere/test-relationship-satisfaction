@@ -13,6 +13,8 @@ export default function Qsection() {
     return stored ? JSON.parse(stored) : {};
   });
 
+  const [showWarning, setShowWarning] = useState(false);
+
   const currentSection = questions[sectionIndex];
 
   useEffect(() => {
@@ -25,9 +27,18 @@ export default function Qsection() {
       [`${sectionIndex}-${questionIndex}`]: value,
     };
     setAnswers(updated);
+    setShowWarning(false); // Ocultar advertencia si respondió algo
   };
 
   const handleNext = async () => {
+    // Verificar si todas las preguntas de la sección actual están respondidas
+    const allAnswered = currentSection.questions.every((_, qIdx) => answers[`${sectionIndex}-${qIdx}`] !== undefined);
+
+    if (!allAnswered) {
+      setShowWarning(true);
+      return;
+    }
+
     if (sectionIndex < questions.length - 1) {
       navigate(`/section/${id}/${sectionIndex + 1}`);
     } else {
@@ -111,13 +122,19 @@ export default function Qsection() {
         })}
       </div>
 
-      <div className="flex justify-end mt-10">
+      <div className="flex flex-col items-end mt-10">
         <button
           onClick={handleNext}
           className="bg-green-600 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-green-700 transition duration-200"
         >
           {sectionIndex === questions.length - 1 ? 'Terminar Encuesta' : 'Siguiente Sección'}
         </button>
+
+        {showWarning && (
+          <p className="text-red-600 text-sm mt-2 font-medium">
+            Por favor, responde todas las preguntas antes de continuar.
+          </p>
+        )}
       </div>
     </div>
   );
